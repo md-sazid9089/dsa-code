@@ -1,34 +1,36 @@
-#include <iostream>
-#include <vector>
+#include<bits/stdc++.h>
 using namespace std;
-
-int main() {
-    vector<int> a = {34, 4, 5, 6, 78}; // Input vector
-    int n = a.size();                 // Size of the vector
-
-    // Selection Sort Algorithm
-    for (int i = 0; i < n - 1; i++) {
-        int min1 = a[i]; // Assume the first element is the minimum
-        int minidx = i;  // Store the index of the minimum element
-
-        // Find the minimum element in the unsorted portion
-        for (int j = i + 1; j < n; j++) {
-            if (a[j] < min1) {
-                min1 = a[j];
-                minidx = j;
-            }
+void Selection_sort(vector<int>&b){
+int n=b.size();
+for(int i=0;i<n-1;i++){
+    int min1=1000;
+    int minidx=-1;
+    for(int j=i;j<n;j++){
+        if(min1>b[j]){
+            min1=b[j];
+            minidx=j;
         }
-
-        // Swap the minimum element with the first element of the unsorted portion
-        int temp = a[i];
-        a[i] = a[minidx];
-        a[minidx] = temp;
     }
+    int temp=b[i];
+    b[i]=b[minidx];
+    b[minidx]=temp;
+}
+}
+void print_sort(vector<int>&c){
+for(auto &d:c){
+    cout<<d<<"  ";
+}
+}
+int main(){
+vector<int>a;
+int n;
+cin>>n;
+for(int i=0;i<n;i++){
+    int x;
+    cin>>x;
+    a.push_back(x);
+}
+Selection_sort(a);
+print_sort(a);
 
-    // Print the sorted vector
-    for (int i = 0; i < n; i++) {
-        cout << a[i] << " ";
-    }
-
-    return 0;
 }
