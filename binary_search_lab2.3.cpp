@@ -31,8 +31,8 @@ void binarySearch(vector<int>& b, int n, int target) {
 }
 
 int main() {
-    vector<int> v = {1, 3, 3, 3, 3, 3, 3, 3, 5, 7, 10, 12};
-    int target1 = 3;
+    vector<int> v = {1, 7 ,7, 7, 10, 12};
+    int target1 = 7;
     binarySearch(v, v.size(), target1);
     return 0;
 }
