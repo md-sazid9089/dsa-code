@@ -75,7 +75,7 @@ void deleteFromPosition(Node **head, int position) {
     }
     Node *current = *head;
     int count = 1;
-    while (current != nullptr && count < position - 1) {
+    while (current!=nullptr && count < position - 1) {
         current = current->next;
         count++;
     }
@@ -135,7 +135,7 @@ void second_last_node(Node *head) {
 //(11) list_size() -> function to print the size of the linked list
 void list_size(Node *head) {
     int size = 0;
-    while (head != nullptr) {
+    while (head != nullptr)  {
         size++;
         head = head->next;
     }
