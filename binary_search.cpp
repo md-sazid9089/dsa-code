@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
 int binarySearch(vector<int> &arr, int item, int start, int end) {
@@ -10,8 +10,7 @@ int binarySearch(vector<int> &arr, int item, int start, int end) {
             return binarySearch(arr, item, mid + 1, end);
         else
             return mid; // Element found
-    }
-    return -1; // Element not found
+    }     return -1; // Element not found
 }
 
 int main() {
