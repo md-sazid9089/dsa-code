@@ -79,3 +79,57 @@ cout<<"found at index: "<<result<<endl;
 }
 return 0;
 }
+//4
+#include <bits/stdc++.h>
+using namespace std;
+
+void SelectionSort(vector<int>& v) {
+    int n = v.size();
+    for (int i = 0; i < n - 1; i++) {
+        int minIndex = i;
+        for (int j = i + 1; j < n; j++) {
+            if (v[j] < v[minIndex])
+                minIndex = j;
+        }
+        swap(v[i], v[minIndex]);
+    }
+}
+
+int main() {
+    vector<int> v = {5,4,3,1,2,6};
+    SelectionSort(v);
+
+    for (int num : v) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
+//5
+#include <bits/stdc++.h>
+using namespace std;
+
+void insertionSort(vector<int>& v) {
+    int n = v.size();
+    for (int i = 0; i < n-1; i++) {
+        int j=i+1;
+        while(v[j]<v[j-1] && j>=1){
+            swap(v[j],v[j-1]);
+            j--;
+        }
+    }
+}
+
+int main() {
+    vector<int> v = {5,4,3,1,2,6};
+    insertionSort(v);
+
+    for (int num : v) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
+//6
